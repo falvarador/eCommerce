@@ -1,0 +1,15 @@
+# Visual Studio 2019+
+.vs/
+src/*.csproj.user
+
+# Visual Studio Code
+.vscode/
+
+# Build results
+src/bin/
+src/obj/
+test/bin/
+test/obj/
+
+# User-specific files
+src/Logs/
