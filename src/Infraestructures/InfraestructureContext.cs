@@ -5,17 +5,9 @@ namespace eCommerce.WebApi.Infraestructure
 
     public class InfraestructureContext : DbContext 
     {
-        #region Configuration
-
         public InfraestructureContext(DbContextOptions<InfraestructureContext> options)
             : base(options)
-        {
-            
-        }   
-
-        #endregion
-
-        #region Tables
+        { }   
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -25,16 +17,15 @@ namespace eCommerce.WebApi.Infraestructure
             base.OnModelCreating(modelBuilder);
         }
 
-        // public DbSet<Movie> Movies { get; set; }
-        
-        // public DbSet<Gender> Genders { get; set; }
-
-        // public DbSet<Person> People { get; set; }
-
-        // public DbSet<MovieGender> MoviesGenders { get; set; }
-
-        // public DbSet<MovieActor> MoviesActors { get; set; }
-
-        #endregion
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<CartItem> CartItems { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Discount> Discounts { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductDetail> ProductDetails { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

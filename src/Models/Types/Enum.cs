@@ -5,4 +5,10 @@ namespace eCommerce.WebApi.Model
         Admin,
         Customer
     }
+
+    public enum DiscountType
+    {
+        Online,
+        Shipping
+    }
 }

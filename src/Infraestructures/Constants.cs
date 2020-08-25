@@ -4,9 +4,9 @@ namespace eCommerce.WebApi.Infraestructure
     {
         private const string _schema = "";
 
-        public class VendorAccountPayable
+        public class Something
         {
-            public const string GetVendorAccountPayable = "spSelectCuentaxPagarProveedor";
+            public const string Someone = "";
         }
     }
 }

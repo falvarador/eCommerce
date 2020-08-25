@@ -11,6 +11,7 @@ namespace eCommerce.WebApi.Extension
     using Swashbuckle.AspNetCore.SwaggerGen;
     using eCommerce.WebApi.Infraestructure;
     using Microsoft.EntityFrameworkCore;
+    using eCommerce.WebApi.Common.Utility;
 
     public static class ServiceCollectionExtension
     {
@@ -35,7 +36,7 @@ namespace eCommerce.WebApi.Extension
         public static IServiceCollection AddDbConnectionAndProvider(this IServiceCollection services, IConfiguration configuration)
         {           
             return services
-                .AddDbContext<InfraestructureContext>(options => options.UseSqlServer(configuration.GetConnectionString("SqlServer")));
+                .AddDbContext<InfraestructureContext>(options => options.UseSqlServer(configuration.GetConnectionString(Connections.SqlServer)));
         }
 
         public static IServiceCollection AddApiVersionWithExplorer(this IServiceCollection services)
