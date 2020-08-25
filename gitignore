@@ -13,3 +13,4 @@ test/obj/
 
 # User-specific files
 src/Logs/
+src/Migrations/
